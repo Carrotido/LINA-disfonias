@@ -1,0 +1,545 @@
+[gd_scene load_steps=9 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Core/Main.cs" id="1_main"]
+
+[sub_resource type="StyleBoxFlat" id="StylePanel"]
+bg_color = Color(0.973, 0.976, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.749, 0.78, 0.824, 1)
+corner_radius_top_left = 14
+corner_radius_top_right = 14
+corner_radius_bottom_right = 14
+corner_radius_bottom_left = 14
+shadow_color = Color(0.055, 0.11, 0.18, 0.08)
+shadow_size = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleStage"]
+bg_color = Color(0.918, 0.949, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.576, 0.8, 1, 1)
+corner_radius_top_left = 14
+corner_radius_top_right = 14
+corner_radius_bottom_right = 14
+corner_radius_bottom_left = 14
+
+[sub_resource type="StyleBoxFlat" id="StyleSoft"]
+bg_color = Color(0.937, 0.957, 1, 1)
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_right = 9
+corner_radius_bottom_left = 9
+
+[sub_resource type="StyleBoxFlat" id="StyleSelected"]
+bg_color = Color(0.988, 0.996, 1, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0.38, 0.58, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleProgressBg"]
+bg_color = Color(0.827, 0.894, 0.996, 1)
+corner_radius_top_left = 7
+corner_radius_top_right = 7
+corner_radius_bottom_right = 7
+corner_radius_bottom_left = 7
+
+[sub_resource type="StyleBoxFlat" id="StyleProgressFill"]
+bg_color = Color(0.0, 0.49, 0.73, 1)
+corner_radius_top_left = 7
+corner_radius_top_right = 7
+corner_radius_bottom_right = 7
+corner_radius_bottom_left = 7
+
+[sub_resource type="StyleBoxFlat" id="StyleBalloon"]
+bg_color = Color(0.0, 0.49, 0.73, 1)
+corner_radius_top_left = 48
+corner_radius_top_right = 48
+corner_radius_bottom_right = 48
+corner_radius_bottom_left = 48
+shadow_color = Color(0.02, 0.36, 0.4, 0.25)
+shadow_size = 12
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_main")
+
+[node name="Background" type="ColorRect" parent="."]
+offset_right = 1280.0
+offset_bottom = 720.0
+color = Color(0.973, 0.976, 1, 1)
+mouse_filter = 2
+
+[node name="Header" type="Panel" parent="."]
+offset_right = 1280.0
+offset_bottom = 72.0
+theme_override_styles/panel = SubResource("StylePanel")
+
+[node name="BrandMark" type="ColorRect" parent="Header"]
+offset_left = 28.0
+offset_top = 19.0
+offset_right = 58.0
+offset_bottom = 49.0
+color = Color(0, 0.38, 0.58, 1)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 70.0
+offset_top = 14.0
+offset_right = 320.0
+offset_bottom = 40.0
+theme_override_colors/font_color = Color(0, 0.38, 0.58, 1)
+theme_override_font_sizes/font_size = 20
+text = "Vocalis FonoPlay"
+
+[node name="BrandSubtitle" type="Label" parent="Header"]
+offset_left = 70.0
+offset_top = 39.0
+offset_right = 320.0
+offset_bottom = 58.0
+theme_override_colors/font_color = Color(0.43, 0.48, 0.55, 1)
+theme_override_font_sizes/font_size = 10
+text = "BIOFEEDBACK CLÍNICO"
+
+[node name="Nav" type="Label" parent="Header"]
+offset_left = 370.0
+offset_top = 29.0
+offset_right = 810.0
+offset_bottom = 52.0
+theme_override_colors/font_color = Color(0.24, 0.29, 0.36, 1)
+theme_override_font_sizes/font_size = 13
+text = "1  MODO     2  EJERCICIOS     3  SESIÓN     4  RESULTADOS"
+
+[node name="MicStatus" type="Label" parent="Header"]
+offset_left = 910.0
+offset_top = 23.0
+offset_right = 1110.0
+offset_bottom = 50.0
+theme_override_colors/font_color = Color(0, 0.424, 0.286, 1)
+theme_override_font_sizes/font_size = 12
+text = "●  ENTRADA ACTIVA"
+
+[node name="Clinician" type="Label" parent="Header"]
+offset_left = 1120.0
+offset_top = 20.0
+offset_right = 1250.0
+offset_bottom = 52.0
+theme_override_colors/font_color = Color(0.24, 0.29, 0.36, 1)
+theme_override_font_sizes/font_size = 11
+text = "Lic. Valeria Solís\nFonoaudióloga"
+horizontal_alignment = 2
+
+[node name="Context" type="Panel" parent="."]
+offset_left = 28.0
+offset_top = 94.0
+offset_right = 1252.0
+offset_bottom = 154.0
+theme_override_styles/panel = SubResource("StylePanel")
+
+[node name="Patient" type="Label" parent="Context"]
+offset_left = 20.0
+offset_top = 12.0
+offset_right = 390.0
+offset_bottom = 38.0
+theme_override_colors/font_color = Color(0.07, 0.11, 0.18, 1)
+theme_override_font_sizes/font_size = 17
+text = "Lucía Fernández   ·   42 años"
+
+[node name="PatientMeta" type="Label" parent="Context"]
+offset_left = 20.0
+offset_top = 37.0
+offset_right = 600.0
+offset_bottom = 55.0
+theme_override_colors/font_color = Color(0.43, 0.48, 0.55, 1)
+theme_override_font_sizes/font_size = 11
+text = "Disfonía funcional  ·  Objetivo: emisión sostenida y estable"
+
+[node name="Mode" type="Label" parent="Context"]
+offset_left = 930.0
+offset_top = 20.0
+offset_right = 1190.0
+offset_bottom = 42.0
+theme_override_colors/font_color = Color(0.0, 0.36, 0.4, 1)
+theme_override_font_sizes/font_size = 12
+text = "MODO CLÍNICO  ·  ADULTO"
+horizontal_alignment = 2
+
+[node name="CatalogPanel" type="Panel" parent="."]
+offset_left = 28.0
+offset_top = 164.0
+offset_right = 245.0
+offset_bottom = 688.0
+theme_override_styles/panel = SubResource("StylePanel")
+
+[node name="CatalogTitle" type="Label" parent="CatalogPanel"]
+offset_left = 22.0
+offset_top = 20.0
+offset_right = 640.0
+offset_bottom = 48.0
+theme_override_colors/font_color = Color(0.07, 0.11, 0.18, 1)
+theme_override_font_sizes/font_size = 22
+text = "FLUJO"
+
+[node name="CatalogHint" type="Label" parent="CatalogPanel"]
+offset_left = 22.0
+offset_top = 50.0
+offset_right = 200.0
+offset_bottom = 72.0
+theme_override_colors/font_color = Color(0.43, 0.48, 0.55, 1)
+theme_override_font_sizes/font_size = 12
+text = "SENSADO DSP\n48 kHz"
+
+[node name="CardBalloon" type="Panel" parent="CatalogPanel"]
+offset_left = 48.0
+offset_top = 106.0
+offset_right = 180.0
+offset_bottom = 442.0
+theme_override_styles/panel = SubResource("StyleSoft")
+
+[node name="Accent" type="ColorRect" parent="CatalogPanel/CardBalloon"]
+offset_left = 62.0
+offset_top = 278.0
+offset_right = 166.0
+offset_bottom = 420.0
+color = Color(0.0, 0.49, 0.73, 1)
+
+[node name="Icon" type="Label" parent="CatalogPanel/CardBalloon"]
+offset_left = 62.0
+offset_top = 112.0
+offset_right = 166.0
+offset_bottom = 168.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 34
+text = "▰"
+horizontal_alignment = 1
+
+[node name="Title" type="Label" parent="CatalogPanel/CardBalloon"]
+offset_left = 38.0
+offset_top = 28.0
+offset_right = 180.0
+offset_bottom = 72.0
+theme_override_colors/font_color = Color(0.07, 0.11, 0.18, 1)
+theme_override_font_sizes/font_size = 16
+text = "INTENSIDAD\nDE SOPLO"
+
+[node name="Description" type="Label" parent="CatalogPanel/CardBalloon"]
+offset_left = 38.0
+offset_top = 184.0
+offset_right = 180.0
+offset_bottom = 244.0
+theme_override_colors/font_color = Color(0.24, 0.29, 0.36, 1)
+theme_override_font_sizes/font_size = 11
+text = "Umbral de\nactivación 0.08 RMS"
+
+[node name="CardBird" type="Panel" parent="CatalogPanel"]
+offset_left = 22.0
+offset_top = 458.0
+offset_right = 195.0
+offset_bottom = 510.0
+theme_override_styles/panel = SubResource("StyleSoft")
+
+[node name="Accent" type="ColorRect" parent="CatalogPanel/CardBird"]
+offset_left = 16.0
+offset_top = 10.0
+offset_right = 48.0
+offset_bottom = 42.0
+color = Color(0.0, 0.36, 0.4, 1)
+
+[node name="Icon" type="Label" parent="CatalogPanel/CardBird"]
+offset_left = 54.0
+offset_top = 10.0
+offset_right = 180.0
+offset_bottom = 42.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+text = "Próximo: Pajarito"
+horizontal_alignment = 1
+
+[node name="Title" type="Label" parent="CatalogPanel/CardBird"]
+offset_left = 54.0
+offset_top = 10.0
+offset_right = 180.0
+offset_bottom = 42.0
+theme_override_colors/font_color = Color(0.07, 0.11, 0.18, 1)
+theme_override_font_sizes/font_size = 16
+text = ""
+
+[node name="Description" type="Label" parent="CatalogPanel/CardBird"]
+offset_left = 54.0
+offset_top = 10.0
+offset_right = 180.0
+offset_bottom = 42.0
+theme_override_colors/font_color = Color(0.24, 0.29, 0.36, 1)
+theme_override_font_sizes/font_size = 11
+text = ""
+
+[node name="Strategy" type="Panel" parent="CatalogPanel"]
+offset_left = 22.0
+offset_top = 458.0
+offset_right = 195.0
+offset_bottom = 510.0
+theme_override_styles/panel = SubResource("StyleSoft")
+
+[node name="Title" type="Label" parent="CatalogPanel/Strategy"]
+offset_left = 10.0
+offset_top = 8.0
+offset_right = 180.0
+offset_bottom = 24.0
+theme_override_colors/font_color = Color(0.0, 0.36, 0.4, 1)
+theme_override_font_sizes/font_size = 13
+text = "SOPLO CONTINUO"
+
+[node name="Text" type="Label" parent="CatalogPanel/Strategy"]
+offset_left = 10.0
+offset_top = 27.0
+offset_right = 180.0
+offset_bottom = 48.0
+theme_override_colors/font_color = Color(0.24, 0.29, 0.36, 1)
+theme_override_font_sizes/font_size = 11
+text = "Mantén el aire\nconstante."
+
+[node name="Session" type="Label" parent="CatalogPanel"]
+offset_left = 22.0
+offset_top = 75.0
+offset_right = 195.0
+offset_bottom = 98.0
+theme_override_colors/font_color = Color(0.43, 0.48, 0.55, 1)
+theme_override_font_sizes/font_size = 12
+text = "OBJETIVO 3.0 s"
+
+[node name="Stage" type="Panel" parent="."]
+offset_left = 273.0
+offset_top = 178.0
+offset_right = 900.0
+offset_bottom = 688.0
+theme_override_styles/panel = SubResource("StyleStage")
+
+[node name="StageTitle" type="Label" parent="Stage"]
+offset_left = 22.0
+offset_top = 18.0
+offset_right = 480.0
+offset_bottom = 45.0
+theme_override_colors/font_color = Color(0.0, 0.36, 0.4, 1)
+theme_override_font_sizes/font_size = 15
+text = "EL GRAN GLOBO"
+
+[node name="StageHint" type="Label" parent="Stage"]
+offset_left = 22.0
+offset_top = 46.0
+offset_right = 480.0
+offset_bottom = 70.0
+theme_override_colors/font_color = Color(0.24, 0.29, 0.36, 1)
+theme_override_font_sizes/font_size = 11
+text = "Mantenga una emisión continua y estable"
+
+[node name="StageBadge" type="Label" parent="Stage"]
+offset_left = 430.0
+offset_top = 22.0
+offset_right = 600.0
+offset_bottom = 46.0
+theme_override_colors/font_color = Color(0.0, 0.42, 0.4, 1)
+theme_override_font_sizes/font_size = 11
+text = "●  SEGUIMIENTO ACTIVO"
+horizontal_alignment = 2
+
+[node name="Sky" type="ColorRect" parent="Stage"]
+offset_left = 22.0
+offset_top = 82.0
+offset_right = 605.0
+offset_bottom = 440.0
+color = Color(0.902, 0.933, 0.953, 1)
+mouse_filter = 2
+
+[node name="HillBack" type="ColorRect" parent="Stage/Sky"]
+offset_left = 0.0
+offset_top = 278.0
+offset_right = 583.0
+offset_bottom = 358.0
+color = Color(0.72, 0.83, 0.82, 1)
+
+[node name="HillFront" type="ColorRect" parent="Stage/Sky"]
+offset_left = 0.0
+offset_top = 318.0
+offset_right = 583.0
+offset_bottom = 358.0
+color = Color(0.35, 0.68, 0.78, 1)
+
+[node name="CloudLeft" type="ColorRect" parent="Stage"]
+offset_left = 70.0
+offset_top = 145.0
+offset_right = 190.0
+offset_bottom = 172.0
+color = Color(1, 1, 1, 0.7)
+
+[node name="CloudRight" type="ColorRect" parent="Stage"]
+offset_left = 400.0
+offset_top = 125.0
+offset_right = 520.0
+offset_bottom = 152.0
+color = Color(1, 1, 1, 0.62)
+
+[node name="Balloon" type="Panel" parent="."]
+offset_left = 540.0
+offset_top = 360.0
+offset_right = 620.0
+offset_bottom = 460.0
+theme_override_styles/panel = SubResource("StyleBalloon")
+
+[node name="BalloonHighlight" type="ColorRect" parent="Stage"]
+offset_left = 275.0
+offset_top = 220.0
+offset_right = 292.0
+offset_bottom = 265.0
+color = Color(1, 1, 1, 0.62)
+
+[node name="BalloonString" type="ColorRect" parent="Stage"]
+offset_left = 313.0
+offset_top = 286.0
+offset_right = 316.0
+offset_bottom = 360.0
+color = Color(0.43, 0.48, 0.55, 0.65)
+
+[node name="ControlPanel" type="Panel" parent="."]
+offset_left = 918.0
+offset_top = 510.0
+offset_right = 1252.0
+offset_bottom = 688.0
+theme_override_styles/panel = SubResource("StylePanel")
+
+[node name="PanelTitle" type="Label" parent="ControlPanel"]
+offset_left = 20.0
+offset_top = 16.0
+offset_right = 490.0
+offset_bottom = 42.0
+theme_override_colors/font_color = Color(0.07, 0.11, 0.18, 1)
+theme_override_font_sizes/font_size = 15
+text = "Parámetros del ejercicio"
+
+[node name="Threshold" type="Label" parent="ControlPanel"]
+offset_left = 20.0
+offset_top = 50.0
+offset_right = 480.0
+offset_bottom = 72.0
+theme_override_colors/font_color = Color(0.24, 0.29, 0.36, 1)
+theme_override_font_sizes/font_size = 11
+text = "Umbral de activación       0.08 RMS"
+
+[node name="IntensityLabel" type="Label" parent="ControlPanel"]
+offset_left = 20.0
+offset_top = 82.0
+offset_right = 470.0
+offset_bottom = 105.0
+theme_override_colors/font_color = Color(0.43, 0.48, 0.55, 1)
+theme_override_font_sizes/font_size = 11
+text = "CONTINUIDAD DEL SOPLO"
+
+[node name="Intensity" type="ProgressBar" parent="."]
+offset_left = 938.0
+offset_top = 590.0
+offset_right = 1232.0
+offset_bottom = 620.0
+theme_override_styles/background = SubResource("StyleProgressBg")
+theme_override_styles/fill = SubResource("StyleProgressFill")
+value = 0.0
+show_percentage = true
+
+[node name="FlowGauge" type="ProgressBar" parent="CatalogPanel"]
+offset_left = 84.0
+offset_top = 128.0
+offset_right = 146.0
+offset_bottom = 420.0
+max_value = 100.0
+value = 0.0
+show_percentage = false
+orientation = 1
+theme_override_styles/background = SubResource("StyleProgressBg")
+theme_override_styles/fill = SubResource("StyleProgressFill")
+
+[node name="Status" type="Label" parent="."]
+offset_left = 938.0
+offset_top = 648.0
+offset_right = 1232.0
+offset_bottom = 675.0
+theme_override_colors/font_color = Color(0.0, 0.42, 0.4, 1)
+theme_override_font_sizes/font_size = 11
+text = "Inicializando captura de audio..."
+horizontal_alignment = 1
+
+[node name="TelemetryPanel" type="Panel" parent="."]
+offset_left = 918.0
+offset_top = 178.0
+offset_right = 1252.0
+offset_bottom = 492.0
+theme_override_styles/panel = SubResource("StylePanel")
+
+[node name="TelemetryTitle" type="Label" parent="TelemetryPanel"]
+offset_left = 20.0
+offset_top = 18.0
+offset_right = 310.0
+offset_bottom = 45.0
+theme_override_colors/font_color = Color(0.07, 0.11, 0.18, 1)
+theme_override_font_sizes/font_size = 16
+text = "Telemetría de sesión"
+
+[node name="CurrentLabel" type="Label" parent="TelemetryPanel"]
+offset_left = 20.0
+offset_top = 62.0
+offset_right = 310.0
+offset_bottom = 84.0
+theme_override_colors/font_color = Color(0.43, 0.48, 0.55, 1)
+theme_override_font_sizes/font_size = 11
+text = "EMISIÓN SOSTENIDA ACTUAL"
+
+[node name="CurrentDuration" type="Label" parent="TelemetryPanel"]
+offset_left = 20.0
+offset_top = 88.0
+offset_right = 190.0
+offset_bottom = 132.0
+theme_override_colors/font_color = Color(0.0, 0.36, 0.4, 1)
+theme_override_font_sizes/font_size = 30
+text = "0.0 s"
+
+[node name="CurrentState" type="Label" parent="TelemetryPanel"]
+offset_left = 190.0
+offset_top = 102.0
+offset_right = 310.0
+offset_bottom = 124.0
+theme_override_colors/font_color = Color(0.0, 0.42, 0.4, 1)
+theme_override_font_sizes/font_size = 11
+text = "En espera"
+horizontal_alignment = 2
+
+[node name="Record" type="Label" parent="TelemetryPanel"]
+offset_left = 20.0
+offset_top = 156.0
+offset_right = 310.0
+offset_bottom = 190.0
+theme_override_colors/font_color = Color(0.24, 0.29, 0.36, 1)
+theme_override_font_sizes/font_size = 13
+text = "Mejor registro de sesión     --"
+
+[node name="Goal" type="Label" parent="TelemetryPanel"]
+offset_left = 20.0
+offset_top = 210.0
+offset_right = 310.0
+offset_bottom = 238.0
+theme_override_colors/font_color = Color(0.0, 0.36, 0.4, 1)
+theme_override_font_sizes/font_size = 13
+text = "Objetivo de la sesión"
+
+[node name="GoalText" type="Label" parent="TelemetryPanel"]
+offset_left = 20.0
+offset_top = 240.0
+offset_right = 310.0
+offset_bottom = 285.0
+theme_override_colors/font_color = Color(0.43, 0.48, 0.55, 1)
+theme_override_font_sizes/font_size = 11
+text = "Mantener una emisión\ncontinua y estable"

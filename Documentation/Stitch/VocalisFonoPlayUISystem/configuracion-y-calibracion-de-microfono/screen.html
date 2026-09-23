@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-variant": "#d3e4fe", "on-primary-fixed": "#001d31", "on-tertiary-fixed-variant": "#653e00", "on-primary-container": "#fdfcff", "on-tertiary-fixed": "#2a1700", "on-surface-variant": "#3f4850", "on-error-container": "#93000a", "primary-fixed": "#cce5ff", "on-secondary-fixed": "#002113", "inverse-on-surface": "#eaf1ff", "tertiary-container": "#a36700", "on-error": "#ffffff", "secondary-fixed": "#6ffbbe", "tertiary-fixed": "#ffddb8", "error": "#ba1a1a", "background": "#f8f9ff", "on-secondary": "#ffffff", "on-tertiary": "#ffffff", "outline": "#707881", "tertiary": "#825100", "secondary-fixed-dim": "#4edea3", "on-tertiary-container": "#fffbff", "primary": "#006194", "tertiary-fixed-dim": "#ffb95f", "error-container": "#ffdad6", "surface-bright": "#f8f9ff", "on-secondary-fixed-variant": "#005236", "primary-fixed-dim": "#93ccff", "surface-container-lowest": "#ffffff", "on-primary": "#ffffff", "inverse-primary": "#93ccff", "on-background": "#0b1c30", "surface-tint": "#006398", "surface-container-low": "#eff4ff", "surface-container": "#e5eeff", "surface": "#f8f9ff", "secondary": "#006c49", "on-primary-fixed-variant": "#004b73", "surface-container-highest": "#d3e4fe", "surface-dim": "#cbdbf5", "inverse-surface": "#213145", "primary-container": "#007bb9", "on-secondary-container": "#00714d", "surface-container-high": "#dce9ff", "on-surface": "#0b1c30", "secondary-container": "#6cf8bb", "outline-variant": "#bfc7d2" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-sm": "0.5rem", "space-xl": "2.5rem", "margin": "2rem", "gutter": "1.5rem", "space-md": "1rem", "margin-compact": "1.25rem", "space-xs": "0.25rem", "gutter-compact": "1rem", "space-lg": "1.5rem" }, "fontFamily": { "body-md": [ "Plus Jakarta Sans" ], "body-lg": [ "Plus Jakarta Sans" ], "label-lg": [ "Plus Jakarta Sans" ], "display-lg": [ "Plus Jakarta Sans" ], "headline-lg": [ "Plus Jakarta Sans" ], "headline-md": [ "Plus Jakarta Sans" ], "title-lg": [ "Plus Jakarta Sans" ], "display-md": [ "Plus Jakarta Sans" ], "label-md": [ "Plus Jakarta Sans" ], "label-sm": [ "Plus Jakarta Sans" ] }, "fontSize": { "body-md": [ "14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" } ], "body-lg": [ "16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" } ], "label-lg": [ "14px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "600" } ], "display-lg": [ "48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "headline-lg": [ "28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "headline-md": [ "22px", { "lineHeight": "30px", "letterSpacing": "-0.005em", "fontWeight": "600" } ], "title-lg": [ "18px", { "lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "600" } ], "display-md": [ "36px", { "lineHeight": "44px", "letterSpacing": "-0.015em", "fontWeight": "700" } ], "label-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" } ], "label-sm": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "500" } ] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased selection:bg-primary-fixed selection:text-on-primary-fixed"><aside class="fixed left-0 top-0 h-screen w-72 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between select-none"><div class="flex flex-col flex-1 min-h-0"><div class="h-20 px-space-lg flex items-center gap-3 bg-surface-container-lowest"><img alt="Modern minimalist logo for 'Vocalis FonoPlay', combining a stylized acoustic sound wave and a gentle floating balloon or breath breeze motif. Vibrant cyan and teal tones, friendly curved geometry, professional health-tech aesthetic on transparent or white background.. Design context: - Primary color: #0284c7
+- Font: plusJakartaSans
+- Mode: light
+- Roundness: rounded-md
+. The logo should be visually consistent with these brand tokens." class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UnU5hyBwd-BO8vHkiNTzzoxiUsBCEc-19z_pIcNxZtB_dVd3FhUiEL8ek8xxMelNtBqUfGiLORddM9tXmkhIUVtMC6rYUqbP9-5A0qD63ehevIXpEyR75hQ4Z0JFVxWgWL7RMwVXfXy844fhbdcWY86ZgcGwixSpM3Ahlk1mQ-G6oKNsN_8pDsWqhQNlWjWjEtNN6Haw1a5C7J1yBq-LWa7eKgpWNbZK2TJAeSDqSWUPb3VUMkRBnlHg"/><div class="flex flex-col"><span class="font-title-lg text-title-lg text-on-surface tracking-tight leading-none">Vocalis FonoPlay</span><span class="font-label-sm text-label-sm text-primary tracking-wide uppercase mt-1">Portal Fonoaudiología</span></div></div><div class="px-space-md py-space-sm"><div class="px-space-sm py-space-xs"><span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Módulos Clínicos</span></div></div><nav class="flex-1 px-space-md space-y-1 overflow-y-auto" data-active-classes="bg-primary-container text-on-primary-container font-label-lg shadow-sm"><a class="flex items-center gap-3 px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group font-label-lg text-label-lg" data-path="dashboard-clinico" href="#"><span class="material-symbols-outlined text-primary group-hover:scale-105 transition-transform">dashboard</span><span>Dashboard Clínico</span></a><a class="flex items-center gap-3 px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group font-label-lg text-label-lg" data-path="pacientes-y-fichas" href="#"><span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">group</span><span>Pacientes &amp; Fichas</span></a><a class="flex items-center gap-3 px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group font-label-lg text-label-lg" data-path="sesiones-y-registros" href="#"><span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">vital_signs</span><span>Sesiones &amp; Registros</span></a><a class="flex items-center gap-3 px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group font-label-lg text-label-lg" data-path="banco-de-ejercicios" href="#"><span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">sports_esports</span><span>Banco de Ejercicios</span></a><a class="flex items-center gap-3 px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group font-label-lg text-label-lg" data-path="informes-acusticos" href="#"><span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">query_stats</span><span>Informes Acústicos</span></a><a class="flex items-center gap-3 px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group font-label-lg text-label-lg" data-path="configuracion-y-calibracion" href="#"><span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">tune</span><span>Configuración &amp; Calibración</span></a></nav></div><div class="p-space-md bg-surface-container-low rounded-t-2xl m-space-sm space-y-space-sm shadow-[0_1px_6px_rgba(0,0,0,0.03)]"><a class="w-full flex items-center justify-center gap-2 py-2.5 px-3 bg-secondary-container text-on-secondary-container hover:bg-secondary hover:text-on-secondary rounded-xl font-label-md text-label-md transition-all shadow-sm" data-path="modo-paciente" href="#"><span class="material-symbols-outlined text-base">swap_horizontal_circle</span><span>Cambiar a Modo Paciente</span></a><div class="flex items-center gap-3 pt-2"><div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-on-primary font-title-lg text-title-lg flex-shrink-0 shadow-sm"><span class="material-symbols-outlined text-[20px]">stethoscope</span></div><div class="flex flex-col min-w-0 flex-1"><span class="font-label-md text-label-md text-on-surface truncate leading-tight">Dra. Camila Valenzuela</span><span class="font-label-sm text-label-sm text-outline truncate">Fonoaudióloga • Mat. #4821</span></div><span class="material-symbols-outlined text-outline-variant text-[18px]">verified</span></div></div></aside><div class="pl-72 flex flex-col min-h-screen"><header class="fixed top-0 left-72 right-0 h-20 bg-surface/90 backdrop-blur-xl z-40 px-space-lg flex items-center justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-lg flex-1 max-w-2xl"><div class="relative w-full"><span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-outline text-[20px]">search</span><input class="w-full pl-11 pr-4 py-2.5 bg-surface-container-lowest text-on-surface placeholder:text-outline text-body-md font-body-md rounded-full outline-none ring-1 ring-outline-variant/60 focus:ring-2 focus:ring-primary transition-all shadow-sm" placeholder="Buscar paciente por nombre, RUT o historia clínica..." type="text"/></div></div><div class="flex items-center gap-space-md"><div class="hidden xl:flex items-center gap-2 px-3 py-1.5 bg-surface-container-lowest rounded-full ring-1 ring-outline-variant/50 shadow-sm"><span class="material-symbols-outlined text-secondary text-[18px]">mic</span><div class="flex flex-col"><span class="font-label-sm text-label-sm text-on-surface font-semibold leading-tight">Micrófono Clínico Conectado</span><span class="font-label-sm text-[10px] text-outline leading-tight">IEC 60601-1 • 48kHz / 24-bit</span></div><span class="w-2 h-2 rounded-full bg-secondary animate-pulse ml-1"></span></div><button class="relative w-10 h-10 rounded-full bg-surface-container-lowest flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors shadow-sm ring-1 ring-outline-variant/50" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-error ring-2 ring-surface-container-lowest"></span></button><button class="flex items-center gap-2 px-space-md py-2.5 bg-primary hover:bg-primary-container text-on-primary rounded-xl font-label-lg text-label-lg shadow-sm hover:shadow transition-all active:translate-y-0.5" type="button"><span class="material-symbols-outlined text-[20px]">add_circle</span><span>Nueva Sesión Clínica</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center flex-shrink-0 shadow-sm"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-20 w-full px-space-lg py-space-lg flex-1 bg-background"><div class="flex flex-col w-full space-y-space-lg pb-space-xl">
+<!-- HEADER & ACCIONES PRINCIPALES -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="space-y-1">
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm">
+          Hardware Acústico v2.4
+        </span>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+          Protocolo IEC 60601-1 Activo
+        </span>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+          Latencia: 12ms (Óptima)
+        </span>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+          48 kHz / 24-bit PCM
+        </span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+        Calibración Acústica &amp; Configuración de Audio
+      </h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">
+        Ajuste de transductores, umbrales bioacústicos en dB SPL y perfiles de sensibilidad estandarizados para biofeedback en tiempo real.
+      </p>
+</div>
+<div class="flex items-center gap-space-sm flex-shrink-0">
+<button class="flex items-center gap-2 px-4 py-2.5 bg-surface-container-lowest text-on-surface hover:bg-surface-container font-label-lg text-label-lg rounded-xl shadow-sm transition-all active:translate-y-0.5" type="button">
+<span class="material-symbols-outlined text-[20px] text-outline">restart_alt</span>
+<span>Restablecer Fábrica</span>
+</button>
+<button class="flex items-center gap-2 px-5 py-2.5 bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg rounded-xl shadow-sm hover:shadow transition-all active:translate-y-0.5" type="button">
+<span class="material-symbols-outlined text-[20px]">save</span>
+<span>Guardar Perfil de Calibración</span>
+</button>
+</div>
+</div>
+<!-- SELECTOR DE DISPOSITIVO Y ENTORNO -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Tarjeta 1: Dispositivo Activo -->
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.03)] flex flex-col justify-between space-y-space-md">
+<div class="space-y-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Transductor de Entrada</span>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-secondary font-semibold">
+<span class="material-symbols-outlined text-[16px]">sensors</span>
+            Conectado
+          </span>
+</div>
+<div class="relative mt-2">
+<select class="w-full appearance-none bg-surface-container-low text-on-surface font-title-lg text-title-lg rounded-xl py-2.5 pl-3 pr-9 focus:outline-none focus:bg-surface-container-high transition-colors cursor-pointer">
+<option selected="">Micrófono Clínico USB-C Fono-Grade (Calibrado)</option>
+<option>Focusrite Scarlett 2i2 Gen 4 (XLR In 1)</option>
+<option>Headset Clínico Omnidireccional 3.5mm</option>
+<option>Micrófono de Matriz Integrado</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-outline pointer-events-none">expand_more</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-2 text-on-surface-variant font-label-sm text-label-sm bg-surface-container-low px-3 py-2 rounded-xl">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">memory</span>
+          Driver: ASIO Low-Latency 2.1
+        </span>
+<span class="text-outline">SNR: &gt;72 dB</span>
+</div>
+</div>
+<!-- Tarjeta 2: Perfil de Paciente / Consulta -->
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.03)] flex flex-col justify-between space-y-space-md">
+<div class="space-y-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Modo Operativo de Perfil</span>
+<span class="material-symbols-outlined text-outline text-[18px]">badge</span>
+</div>
+<div class="grid grid-cols-2 gap-1.5 p-1 bg-surface-container-low rounded-xl mt-2">
+<button class="py-2 px-2 text-center rounded-lg bg-surface-container-lowest text-primary font-label-md text-label-md shadow-sm transition-all" type="button">
+            Consulta Clínica
+          </button>
+<button class="py-2 px-2 text-center rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all" type="button">
+            Telepráctica / Niño
+          </button>
+</div>
+</div>
+<div class="flex items-center gap-2 pt-1 font-body-md text-body-md text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px] text-primary">person</span>
+<span class="truncate">Paciente vinculado: <strong class="text-on-surface font-semibold">Mateo Retamal (8a)</strong></span>
+</div>
+</div>
+<!-- Tarjeta 3: Ruido de Fondo / Sala -->
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.03)] flex flex-col justify-between space-y-space-md">
+<div class="space-y-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Línea Base Acústica</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">
+            Silencioso (&lt; 35 dB)
+          </span>
+</div>
+<div class="flex items-baseline justify-between mt-2">
+<div class="flex items-baseline gap-1">
+<span class="font-display-md text-display-md font-bold text-on-surface tracking-tight" id="noiseLevelDisplay">31.8</span>
+<span class="font-title-lg text-title-lg text-outline">dB SPL</span>
+</div>
+<button class="flex items-center gap-1.5 px-3 py-1.5 bg-surface-container-high hover:bg-surface-variant text-primary font-label-md text-label-md rounded-xl transition-all" id="measureNoiseBtn" type="button">
+<span class="material-symbols-outlined text-[16px]">graphic_eq</span>
+<span>Medir Sala (5s)</span>
+</button>
+</div>
+</div>
+<div class="w-full bg-surface-container rounded-full h-2 overflow-hidden flex">
+<div class="bg-secondary h-full rounded-full transition-all duration-500" style="width: 32%"></div>
+</div>
+</div>
+</div>
+<!-- SECCIÓN CENTRAL: BANCO DE PRUEBA Y MONITOR ACÚSTICO EN VIVO -->
+<div class="bg-surface-container-lowest rounded-3xl p-space-lg shadow-[0_8px_30px_rgba(0,0,0,0.04)] space-y-space-lg">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="space-y-0.5">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[24px]">stream</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Monitor Bioacústico en Tiempo Real</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Verificación espectrográfica instantánea con corridor de fonación terapéutica y detección f0.
+        </p>
+</div>
+<!-- Métricas instantáneas y avatar gamificado -->
+<div class="flex items-center gap-space-md">
+<!-- Mini Biofeedback Widget Gamificado -->
+<div class="flex items-center gap-3 bg-surface-container-low px-4 py-2 rounded-2xl">
+<div class="relative w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center overflow-hidden">
+<span class="material-symbols-outlined text-primary text-[22px] transition-transform duration-300" id="balloonIcon">air</span>
+<div class="absolute bottom-0 inset-x-0 bg-secondary/30 h-1/2"></div>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">Respuesta del Juego</span>
+<span class="font-label-md text-label-md text-secondary font-semibold" id="balloonStatus">Soplo Detectado</span>
+</div>
+</div>
+<button class="flex items-center gap-2 px-5 py-3 bg-secondary text-on-secondary font-label-lg text-label-lg rounded-2xl shadow hover:bg-on-secondary-fixed-variant transition-all active:translate-y-0.5" id="toggleTrialPhonation" type="button">
+<span class="material-symbols-outlined text-[20px]">mic</span>
+<span id="trialBtnText">Iniciar Fonación de Prueba (3s)</span>
+</button>
+</div>
+</div>
+<!-- Panel Dividido: 8 Cols Espectro/Vúmetro + 4 Cols Telemetría -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg items-start">
+<!-- Columna Izquierda: Visualizador FFT + Vúmetro 3 Bandas (8 cols) -->
+<div class="xl:col-span-8 space-y-space-md">
+<!-- Pantalla de Osciloscopio / Espectrograma SVG interactivo -->
+<div class="relative bg-inverse-surface rounded-2xl p-space-md overflow-hidden text-inverse-on-surface min-h-[260px] flex flex-col justify-between">
+<!-- Cuadrícula sutil de fondo y guías espectrales -->
+<div class="absolute inset-0 bg-[radial-gradient(#93ccff_1px,transparent_1px)] [background-size:16px_16px] opacity-10"></div>
+<!-- Franja de corredor terapéutico en el display -->
+<div class="absolute inset-x-0 top-[28%] bottom-[28%] bg-secondary/10 pointer-events-none flex items-center justify-between px-4">
+<span class="text-[10px] text-secondary font-mono uppercase tracking-widest">Corredor Óptimo Fonatorio (45-75 dB)</span>
+<span class="text-[10px] text-secondary font-mono">F0 Óptima [180-240 Hz]</span>
+</div>
+<!-- Header del display técnico -->
+<div class="relative z-10 flex items-center justify-between font-mono text-[11px] text-outline-variant">
+<div class="flex items-center gap-4">
+<span class="flex items-center gap-1 text-secondary-fixed">
+<span class="w-2 h-2 rounded-full bg-secondary-fixed animate-ping"></span>
+                LIVE FFT STREAM
+              </span>
+<span>FFT Size: 2048 pts</span>
+<span>Ventana: Hanning</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="text-inverse-primary font-semibold">Pico: 215 Hz (/a/)</span>
+<span class="text-tertiary-fixed">Jitter: 0.42%</span>
+</div>
+</div>
+<!-- Gráfico SVG de Forma de Onda / Pitch Ribbon -->
+<div class="relative z-10 w-full my-auto py-2">
+<svg class="w-full h-32 overflow-visible stroke-current" preserveaspectratio="none" viewbox="0 0 800 130">
+<defs>
+<lineargradient id="waveGradient" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" stop-color="#93ccff" stop-opacity="0.2"></stop>
+<stop offset="30%" stop-color="#0284c7" stop-opacity="0.9"></stop>
+<stop offset="65%" stop-color="#4edea3" stop-opacity="1"></stop>
+<stop offset="85%" stop-color="#0284c7" stop-opacity="0.8"></stop>
+<stop offset="100%" stop-color="#93ccff" stop-opacity="0.3"></stop>
+</lineargradient>
+<lineargradient id="glowGlow" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#0284c7" stop-opacity="0.35"></stop>
+<stop offset="100%" stop-color="#0284c7" stop-opacity="0"></stop>
+</lineargradient>
+</defs>
+<!-- Área de relleno suave bajo la curva -->
+<path d="M 0,65 Q 40,65 80,63 T 160,50 T 240,78 T 320,42 T 400,35 T 480,48 T 560,30 T 640,60 T 720,64 L 800,65 L 800,120 L 0,120 Z" fill="url(#glowGlow)"></path>
+<!-- Línea de Onda Armónica Principal -->
+<path d="M 0,65 Q 40,65 80,63 T 160,50 T 240,78 T 320,42 T 400,35 T 480,48 T 560,30 T 640,60 T 720,64 L 800,65" fill="none" stroke="url(#waveGradient)" stroke-linecap="round" stroke-width="3.5"></path>
+<!-- Marcador de Frecuencia Fundamental F0 -->
+<circle class="animate-pulse" cx="400" cy="35" fill="#4edea3" r="5"></circle>
+<line opacity="0.6" stroke="#4edea3" stroke-dasharray="3 3" stroke-width="1" x1="400" x2="400" y1="20" y2="110"></line>
+</svg>
+</div>
+<!-- Escala de Frecuencias Inferior -->
+<div class="relative z-10 flex justify-between font-mono text-[10px] text-outline-variant pt-2">
+<span>50 Hz</span>
+<span>100 Hz</span>
+<span class="text-secondary-fixed font-semibold">F0 (215 Hz)</span>
+<span>500 Hz</span>
+<span>1 kHz</span>
+<span>2 kHz</span>
+<span>4 kHz</span>
+</div>
+</div>
+<!-- VÚMETRO CALIBRADO MULTIBANDA (3 ZONAS CLÍNICAS) -->
+<div class="space-y-2 bg-surface-container-low p-space-md rounded-2xl">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="font-semibold text-on-surface">Vúmetro dB SPL Ponderado (Fast - Type 1)</span>
+<div class="flex items-center gap-4 text-[11px]">
+<span class="flex items-center gap-1.5 text-outline">
+<span class="w-2.5 h-2.5 rounded bg-surface-container-highest"></span> Piso &lt;38 dB
+              </span>
+<span class="flex items-center gap-1.5 text-secondary font-semibold">
+<span class="w-2.5 h-2.5 rounded bg-secondary-fixed-dim"></span> Fonación Útil 45-75 dB
+              </span>
+<span class="flex items-center gap-1.5 text-error font-semibold">
+<span class="w-2.5 h-2.5 rounded bg-error"></span> Fatiga / Saturación &gt;80 dB
+              </span>
+</div>
+</div>
+<!-- Barra Vúmetro Segmentada -->
+<div class="relative w-full h-8 bg-surface-container-highest rounded-xl overflow-hidden p-1 flex items-center">
+<!-- Zona 1: Ruido Base (0 a 38) -> 38% -->
+<div class="h-full rounded-l-lg bg-surface-container-high transition-all flex items-center justify-end pr-1 text-[10px] font-mono text-outline" style="width: 38%">
+              Piso
+            </div>
+<!-- Zona 2: Óptimo Fonatorio (38 a 80) -> 42% -->
+<div class="h-full bg-secondary-container text-on-secondary-container font-mono text-[10px] font-semibold flex items-center justify-center transition-all" style="width: 42%">
+              Zona Terapéutica Objetivo
+            </div>
+<!-- Zona 3: Sobreesfuerzo (80 a 100) -> 20% -->
+<div class="h-full rounded-r-lg bg-error-container text-on-error-container font-mono text-[10px] font-semibold flex items-center justify-center transition-all" style="width: 20%">
+              Riesgo
+            </div>
+<!-- Cursor Indicador Aguja en tiempo real (Seteado en 54.2 dB) -->
+<div class="absolute top-0 bottom-0 w-1.5 bg-primary shadow-[0_0_8px_rgba(0,97,148,0.8)] rounded-full transition-all duration-150" style="left: 54.2%">
+<div class="w-3 h-3 bg-primary rounded-full -ml-[3px] -mt-1 shadow-sm"></div>
+</div>
+</div>
+<!-- Marcas de escala numéricas dB SPL -->
+<div class="flex justify-between font-mono text-[11px] text-outline px-1">
+<span>20 dB</span>
+<span>35 dB</span>
+<span class="text-primary font-bold">48 dB (Umbral)</span>
+<span>60 dB</span>
+<span class="text-error font-semibold">76 dB (Alerta)</span>
+<span>90 dB</span>
+<span>110 dB</span>
+</div>
+</div>
+</div>
+<!-- Columna Derecha: Telemetría Instantánea & Estado Fonatorio (4 cols) -->
+<div class="xl:col-span-4 space-y-space-md">
+<!-- Tarjeta Indicador Numérico Gigante -->
+<div class="bg-surface-container-low p-space-lg rounded-2xl text-center space-y-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Nivel Instantáneo Fonación</span>
+<div class="flex items-baseline justify-center gap-1.5">
+<span class="font-display-lg text-display-lg text-primary font-bold tracking-tighter" id="instantDBSPL">54.2</span>
+<span class="font-title-lg text-title-lg text-on-surface-variant font-medium">dB SPL</span>
+</div>
+<div class="inline-flex items-center gap-1.5 px-3 py-1 bg-secondary-container text-on-secondary-container rounded-full font-label-md text-label-md font-semibold">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span>Intensidad Vocal Adecuada</span>
+</div>
+</div>
+<!-- Tarjeta Estabilidad de Soplo / Tono -->
+<div class="bg-surface-container-low p-space-md rounded-2xl space-y-space-sm">
+<div class="flex items-center justify-between font-label-md text-label-md">
+<span class="text-on-surface-variant font-medium">Estabilidad del Soplo (Aerodinámica)</span>
+<span class="text-secondary font-bold">94.8%</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-2.5 overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 94.8%"></div>
+</div>
+<div class="flex items-center justify-between font-label-md text-label-md pt-2">
+<span class="text-on-surface-variant font-medium">Regularidad Tonal (Shimmer)</span>
+<span class="text-primary font-bold">1.8% (Normal)</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-2.5 overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 82%"></div>
+</div>
+</div>
+<!-- Presets Rápidos de Distancia Fonoaudiológica -->
+<div class="bg-surface-container-low p-space-md rounded-2xl space-y-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Distancia de Captación</span>
+<div class="grid grid-cols-3 gap-2">
+<button class="py-2 px-1 text-center rounded-xl bg-surface-container-lowest text-primary font-label-sm text-label-sm shadow-sm font-semibold" type="button">
+              10 cm + Pop
+            </button>
+<button class="py-2 px-1 text-center rounded-xl text-on-surface-variant hover:bg-surface-container font-label-sm text-label-sm" type="button">
+              15 cm Abierto
+            </button>
+<button class="py-2 px-1 text-center rounded-xl text-on-surface-variant hover:bg-surface-container font-label-sm text-label-sm" type="button">
+              Headset 3 cm
+            </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- AJUSTE FINO DE PARÁMETROS DEL ALGORITMO (SLIDERS E INPUTS) -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-lg">
+<!-- Panel Izquierdo: Umbrales Bioacústicos -->
+<div class="bg-surface-container-lowest p-space-lg rounded-3xl shadow-[0_4px_24px_rgba(0,0,0,0.03)] space-y-space-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[22px]">tune</span>
+<h3 class="font-title-lg text-title-lg text-on-surface">Umbrales &amp; Filtros de Detección</h3>
+</div>
+<!-- Control 1: Puerta de Ruido (Noise Gate) -->
+<div class="space-y-1.5 p-3 rounded-2xl bg-surface-container-low">
+<div class="flex justify-between items-center">
+<label class="font-label-lg text-label-lg text-on-surface font-semibold" for="noiseGate">
+            Puerta de Ruido (Noise Gate)
+          </label>
+<span class="font-mono text-label-md text-primary font-bold bg-surface-container-lowest px-2.5 py-0.5 rounded-lg shadow-sm">
+            -42 dBFS
+          </span>
+</div>
+<p class="font-body-md text-[13px] text-on-surface-variant">
+          Descarta micro-respiraciones, carraspeos suaves o clics de teclado antes de activar la animación lúdica.
+        </p>
+<div class="pt-2">
+<input class="w-full accent-primary h-2 bg-surface-container rounded-lg cursor-pointer" id="noiseGate" max="-20" min="-60" type="range" value="-42"/>
+<div class="flex justify-between text-[11px] font-mono text-outline pt-1">
+<span>-60 dBFS (Ultra sensible)</span>
+<span>-20 dBFS (Restrictivo)</span>
+</div>
+</div>
+</div>
+<!-- Control 2: Umbral Mínimo de Activación -->
+<div class="space-y-1.5 p-3 rounded-2xl bg-surface-container-low">
+<div class="flex justify-between items-center">
+<label class="font-label-lg text-label-lg text-on-surface font-semibold" for="activationThreshold">
+            Umbral de Activación del Juego (Soplo/Vocal)
+          </label>
+<span class="font-mono text-label-md text-secondary font-bold bg-surface-container-lowest px-2.5 py-0.5 rounded-lg shadow-sm">
+            48 dB SPL
+          </span>
+</div>
+<p class="font-body-md text-[13px] text-on-surface-variant">
+          Punto exacto donde el personaje infantil (globo o pájaro) responde al flujo espiratorio continuo del paciente.
+        </p>
+<div class="pt-2">
+<input class="w-full accent-secondary h-2 bg-surface-container rounded-lg cursor-pointer" id="activationThreshold" max="65" min="40" type="range" value="48"/>
+<div class="flex justify-between text-[11px] font-mono text-outline pt-1">
+<span>40 dB (Voz hipofónica)</span>
+<span>65 dB (Voz proyectada)</span>
+</div>
+</div>
+</div>
+<!-- Control 3: Alerta de Sobreesfuerzo Vocal -->
+<div class="space-y-1.5 p-3 rounded-2xl bg-surface-container-low">
+<div class="flex justify-between items-center">
+<label class="font-label-lg text-label-lg text-on-surface font-semibold" for="overdriveAlert">
+            Umbral de Alerta de Sobreesfuerzo (Límite Superior)
+          </label>
+<span class="font-mono text-label-md text-error font-bold bg-surface-container-lowest px-2.5 py-0.5 rounded-lg shadow-sm">
+            76 dB SPL
+          </span>
+</div>
+<p class="font-body-md text-[13px] text-on-surface-variant">
+          Activa la señal de frenado visual terapéutico cuando el paciente compensa con constricción laríngea o hiperfunción.
+        </p>
+<div class="pt-2">
+<input class="w-full accent-error h-2 bg-surface-container rounded-lg cursor-pointer" id="overdriveAlert" max="95" min="70" type="range" value="76"/>
+<div class="flex justify-between text-[11px] font-mono text-outline pt-1">
+<span>70 dB SPL</span>
+<span>95 dB SPL</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Panel Derecho: Dinámica Temporal & Adaptación al Paciente -->
+<div class="bg-surface-container-lowest p-space-lg rounded-3xl shadow-[0_4px_24px_rgba(0,0,0,0.03)] flex flex-col justify-between space-y-space-md">
+<div class="space-y-space-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[22px]">speed</span>
+<h3 class="font-title-lg text-title-lg text-on-surface">Dinámica Temporal &amp; Amortiguación</h3>
+</div>
+<!-- Filtro de Ataque y Decaimiento -->
+<div class="p-3 rounded-2xl bg-surface-container-low space-y-2">
+<div class="flex justify-between items-center">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Suavizado de Señal Acústica</span>
+<span class="font-label-md text-label-md text-primary font-bold">Media Móvil (70ms)</span>
+</div>
+<p class="font-body-md text-[13px] text-on-surface-variant">
+            Ajuste para compensar temblores vocales espasmódicos o fatiga neuromuscular en disfonías neurológicas.
+          </p>
+<div class="grid grid-cols-3 gap-2 pt-1">
+<button class="py-2 text-center rounded-xl text-on-surface-variant hover:bg-surface-container font-label-sm text-label-sm" type="button">
+              Inmediato (15ms)
+            </button>
+<button class="py-2 text-center rounded-xl bg-surface-container-lowest text-primary font-semibold shadow-sm font-label-sm text-label-sm" type="button">
+              Equilibrado (70ms)
+            </button>
+<button class="py-2 text-center rounded-xl text-on-surface-variant hover:bg-surface-container font-label-sm text-label-sm" type="button">
+              Alta Suavidad (150ms)
+            </button>
+</div>
+</div>
+<!-- Selector de Frecuencia Fundamental Objetivo -->
+<div class="p-3 rounded-2xl bg-surface-container-low space-y-2">
+<div class="flex justify-between items-center">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Rango Tonal F0 del Paciente</span>
+<span class="font-label-md text-label-md text-secondary font-bold">Pediátrico (180 - 320 Hz)</span>
+</div>
+<div class="grid grid-cols-3 gap-2">
+<div class="p-2.5 bg-surface-container rounded-xl text-center cursor-pointer hover:bg-surface-container-high transition-colors">
+<span class="block font-label-md text-label-md font-semibold text-on-surface">Masculino</span>
+<span class="text-[11px] text-outline font-mono">85 - 165 Hz</span>
+</div>
+<div class="p-2.5 bg-surface-container rounded-xl text-center cursor-pointer hover:bg-surface-container-high transition-colors">
+<span class="block font-label-md text-label-md font-semibold text-on-surface">Femenino</span>
+<span class="text-[11px] text-outline font-mono">165 - 255 Hz</span>
+</div>
+<div class="p-2.5 bg-surface-container-lowest ring-2 ring-primary rounded-xl text-center shadow-sm">
+<span class="block font-label-md text-label-md font-semibold text-primary">Infantil</span>
+<span class="text-[11px] text-primary font-mono font-medium">180 - 350 Hz</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Banner de Verificación de Salud del Transductor -->
+<div class="flex items-center gap-3 p-3.5 bg-secondary-container/40 rounded-2xl text-on-secondary-container">
+<span class="material-symbols-outlined text-[24px] text-secondary">verified_user</span>
+<div class="flex flex-col text-[12px] leading-tight">
+<span class="font-semibold text-on-secondary">Calibración SPL Normalizada con Sonómetro Patrón</span>
+<span class="text-on-secondary-container">Factor de corrección: +1.2 dB aplicado a la cápsula electroacústica.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- MATRIZ DE COMPATIBILIDAD CON VIDEOJUEGOS TERAPÉUTICOS -->
+<div class="bg-surface-container-lowest p-space-lg rounded-3xl shadow-[0_4px_24px_rgba(0,0,0,0.03)] space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="space-y-0.5">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[22px]">sports_esports</span>
+<h3 class="font-title-lg text-title-lg text-on-surface">Impacto de la Calibración en Módulos de Juego</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Comprobación automática de tolerancias bioacústicas antes del inicio de sesión clínica.
+        </p>
+</div>
+<span class="px-3 py-1 bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold rounded-full">
+        3 / 3 Juegos Listos para Jugar
+      </span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Juego 1: El Gran Globo -->
+<div class="p-space-md rounded-2xl bg-surface-container-low flex flex-col justify-between space-y-3">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-10 h-10 rounded-xl bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">bubble_chart</span>
+</div>
+<div>
+<h4 class="font-title-lg text-[16px] text-on-surface leading-snug">El Gran Globo</h4>
+<span class="text-[11px] text-outline">Control de Flujo Laminar</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary text-[20px]">check_circle</span>
+</div>
+<div class="space-y-1.5 text-label-sm text-label-sm">
+<div class="flex justify-between text-on-surface-variant">
+<span>Respuesta a la Presión de Soplo:</span>
+<span class="font-semibold text-primary">Óptima (48 dB)</span>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span>Rango de Tolerancia de Apagado:</span>
+<span class="font-semibold text-secondary">0.6s (Estable)</span>
+</div>
+</div>
+</div>
+<!-- Juego 2: Vuelo del Pájaro -->
+<div class="p-space-md rounded-2xl bg-surface-container-low flex flex-col justify-between space-y-3">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-10 h-10 rounded-xl bg-secondary-fixed flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[22px]">flutter_dash</span>
+</div>
+<div>
+<h4 class="font-title-lg text-[16px] text-on-surface leading-snug">Vuelo del Pájaro</h4>
+<span class="text-[11px] text-outline">Glissando &amp; Entonación F0</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary text-[20px]">check_circle</span>
+</div>
+<div class="space-y-1.5 text-label-sm text-label-sm">
+<div class="flex justify-between text-on-surface-variant">
+<span>Rango Dinámico F0 Asignado:</span>
+<span class="font-semibold text-primary">180 Hz - 320 Hz</span>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span>Sensibilidad al Semitono:</span>
+<span class="font-semibold text-secondary">±15 cents</span>
+</div>
+</div>
+</div>
+<!-- Juego 3: Laberinto de Resonancia -->
+<div class="p-space-md rounded-2xl bg-surface-container-low flex flex-col justify-between space-y-3">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-10 h-10 rounded-xl bg-surface-container-high flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[22px]">alt_route</span>
+</div>
+<div>
+<h4 class="font-title-lg text-[16px] text-on-surface leading-snug">Laberinto Resonante</h4>
+<span class="text-[11px] text-outline">Focos Nasales /m/, /n/</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary text-[20px]">check_circle</span>
+</div>
+<div class="space-y-1.5 text-label-sm text-label-sm">
+<div class="flex justify-between text-on-surface-variant">
+<span>Sensibilidad Formante Nasal:</span>
+<span class="font-semibold text-primary">F1/F2 Calibrados</span>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span>Rechazo de Ruidos de Deglución:</span>
+<span class="font-semibold text-secondary">Activo (-42 dBFS)</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- FOOTER TÉCNICO Y METADATOS CLÍNICOS -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-md bg-surface-container-low p-space-md rounded-2xl">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-outline text-[22px]">history_toggle_off</span>
+<div class="flex flex-col font-body-md text-body-md">
+<span class="text-on-surface font-medium">Última calibración de referencia guardada:</span>
+<span class="text-outline text-[12px]">Hoy, 09:30 AM por Dra. Camila Valenzuela (Fonoaudióloga Clínico)</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="flex items-center gap-1.5 px-3.5 py-2 bg-surface-container-lowest text-on-surface hover:bg-surface-container font-label-md text-label-md rounded-xl shadow-sm transition-all" type="button">
+<span class="material-symbols-outlined text-[18px] text-outline">description</span>
+<span>Exportar Certificado Técnico</span>
+</button>
+<button class="flex items-center gap-1.5 px-4 py-2 bg-primary text-on-primary hover:bg-primary-container font-label-md text-label-md rounded-xl shadow-sm transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">done_all</span>
+<span>Aplicar a Todas las Sesiones</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+  // Micro-interacción: Prueba de Fonación (Simulación bioacústica)
+  const trialBtn = document.getElementById('toggleTrialPhonation');
+  const instantDBSPL = document.getElementById('instantDBSPL');
+  const balloonIcon = document.getElementById('balloonIcon');
+  const balloonStatus = document.getElementById('balloonStatus');
+  const measureBtn = document.getElementById('measureNoiseBtn');
+  const noiseDisplay = document.getElementById('noiseLevelDisplay');
+
+  let isTesting = false;
+  let testInterval = null;
+
+  if (trialBtn) {
+    trialBtn.addEventListener('click', () => {
+      if (isTesting) {
+        clearInterval(testInterval);
+        isTesting = false;
+        trialBtn.innerHTML = '<span class="material-symbols-outlined text-[20px]">mic</span><span>Iniciar Fonación de Prueba (3s)</span>';
+        trialBtn.classList.remove('bg-error', 'text-on-error');
+        trialBtn.classList.add('bg-secondary', 'text-on-secondary');
+        instantDBSPL.textContent = "54.2";
+        balloonIcon.style.transform = "scale(1)";
+        balloonStatus.textContent = "Soplo Detectado";
+      } else {
+        isTesting = true;
+        trialBtn.innerHTML = '<span class="material-symbols-outlined text-[20px] animate-spin">refresh</span><span>Grabando Prueba...</span>';
+        trialBtn.classList.remove('bg-secondary', 'text-on-secondary');
+        trialBtn.classList.add('bg-primary-container', 'text-on-primary-container');
+        
+        let counter = 0;
+        testInterval = setInterval(() => {
+          counter++;
+          const randomSPL = (58 + Math.sin(counter * 0.8) * 8 + (Math.random() * 2)).toFixed(1);
+          instantDBSPL.textContent = randomSPL;
+          const scale = 1 + (randomSPL - 50) * 0.02;
+          balloonIcon.style.transform = `scale(${Math.max(0.9, Math.min(1.4, scale))})`;
+
+          if (counter > 30) {
+            clearInterval(testInterval);
+            isTesting = false;
+            trialBtn.innerHTML = '<span class="material-symbols-outlined text-[20px]">check</span><span>Prueba Completada (61.4 dB)</span>';
+            trialBtn.classList.remove('bg-primary-container', 'text-on-primary-container');
+            trialBtn.classList.add('bg-secondary', 'text-on-secondary');
+            setTimeout(() => {
+              trialBtn.innerHTML = '<span class="material-symbols-outlined text-[20px]">mic</span><span>Iniciar Fonación de Prueba (3s)</span>';
+            }, 3000);
+          }
+        }, 100);
+      }
+    });
+  }
+
+  // Simulación de Medición de Ruido de Fondo (5s)
+  if (measureBtn) {
+    measureBtn.addEventListener('click', () => {
+      measureBtn.disabled = true;
+      measureBtn.innerHTML = '<span class="material-symbols-outlined text-[16px] animate-spin">sync</span><span>Muestreando sala...</span>';
+      let ticks = 0;
+      const noiseTimer = setInterval(() => {
+        ticks++;
+        const sampleNoise = (30.5 + Math.random() * 2.2).toFixed(1);
+        noiseDisplay.textContent = sampleNoise;
+        if (ticks >= 15) {
+          clearInterval(noiseTimer);
+          measureBtn.disabled = false;
+          measureBtn.innerHTML = '<span class="material-symbols-outlined text-[16px]">check</span><span>Calibrado (31.4 dB)</span>';
+          setTimeout(() => {
+            measureBtn.innerHTML = '<span class="material-symbols-outlined text-[16px]">graphic_eq</span><span>Medir Sala (5s)</span>';
+          }, 3500);
+        }
+      }, 200);
+    });
+  }
+</script></main></div></body></html>

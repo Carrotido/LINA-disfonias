@@ -1,0 +1,17 @@
+# Godot-specific
+.imports/
+.export_presets/
+.godot/
+*.translation
+*.import
+*.tmp
+*.log
+
+# Build outputs
+bin/
+obj/
+.vscode/
+
+# OS
+Thumbs.db
+.DS_Store
